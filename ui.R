@@ -5,6 +5,8 @@ ui <- dashboardPage(
       menuItem("How to Use", tabName = "Tab1"),
       menuItem("Now You Try", tabName = "Tab2")
     )
+    # ,
+    # width = 50
   ),
   dashboardBody(
     tabItems(
