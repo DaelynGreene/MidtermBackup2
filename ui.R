@@ -2,12 +2,21 @@ ui <- dashboardPage(
   dashboardHeader(title = "Daelyn Greene 475 Midterm"),
   dashboardSidebar(
     sidebarMenu(
-      menuItem("How to Use", tabName = "Tab1")
+      menuItem("How to Use", tabName = "Tab1"),
+      menuItem("Now You Try", tabName = "Tab2")
     )
   ),
   dashboardBody(
+    tabItems(
     tabItem(
       tabName = "Tab1",
+      
+      
+      h3("Hello world")
+    ),
+    
+    tabItem(
+      tabName = "Tab2",
       
       
       
@@ -34,7 +43,7 @@ ui <- dashboardPage(
       
       actionButton("the", "the")
     )
-  )
+  ))
 
 
 
