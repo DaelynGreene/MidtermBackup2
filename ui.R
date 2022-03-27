@@ -1,53 +1,51 @@
 ui <- dashboardPage(
-  dashboardHeader(title = "Daelyn Greene 475 Midterm"),
+  dashboardHeader(title = "Daelyn 475 Midterm"),
   dashboardSidebar(
     sidebarMenu(
       menuItem("How to Use", tabName = "Tab1"),
       menuItem("Now You Try", tabName = "Tab2")
     )
-    # ,
-    # width = 50
   ),
   dashboardBody(
     tabItems(
-    tabItem(
-      tabName = "Tab1",
+      tabItem(
+        tabName = "Tab1",
+        
+        
+        h3("Upon opening the app, the user needs to input their search term of interest into the text box."),
+        
+        
+        br(),
+        
+        textInput("SearchKeyword","What do you want to search for?"),
       
-      
-      h3("Hello world")
-    ),
-    
-    tabItem(
-      tabName = "Tab2",
-      
-      
-      
-      prettyRadioButtons(
-        inputId = "SearchLocation",
-        label = "Where Do You Want to Search?", 
-        choices = c("FRED", "Google Trends"),
-        icon = icon("check"), 
-        bigger = TRUE,
-        inline = T,
-        animation = "tada",
-        selected = ""
+        h5("NOTE: The timeframe of the search will be for all data that Google Trends has."),
+        
+        
+        
+        
+        
+        
+        
+        
       ),
       
-      
-      
-      uiOutput("Selection"),
-      
-      
-      
-      
-      
-      
-      
-      actionButton("the", "the")
-    )
-  ))
-
-
-
-
+      tabItem(
+        tabName = "Tab2",
+        
+        textInput("SearchKeyword","What do you want to search for?"),
+        
+        
+        
+        
+        
+        
+        
+        
+      )
+    ))
+  
+  
+  
+  
 )
