@@ -10,7 +10,7 @@ library(lubridate)
 library(quantmod)
 library(gtrendsR)
 
-StockInfo <- gtrends(keyword = "Stonks", time = "all")
+StockInfo <- gtrends(keyword = "Lindsey Stirling", time = "all")
 g_trends <- as.data.frame(StockInfo$interest_over_time)
 g_trends$keyword <- NULL
 g_trends$geo <- NULL
