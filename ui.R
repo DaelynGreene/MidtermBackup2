@@ -28,7 +28,7 @@ ui <- dashboardPage(
         
         br(),
         
-        h3("Once Go is clicked, code magic happens in the background. The data is gathered, cleaned, and stored, and a graph of the data is displayed."),
+        h3("Once Go is clicked, code magic happens in the background. The data is gathered, cleaned, and stored, AND a graph of the data is displayed."),
         
         h3("As an example, I have run this process for the search term Lindsey Stirling."),
         
@@ -36,7 +36,7 @@ ui <- dashboardPage(
         
         br(),
         
-        h3("Once you've looked at the graph of the full data until you are cross-eyed, you can then click on one of the following three Radio Buttons to display more graphs."),
+        h3("Once you've looked at the graph of the full data until you've gone crazy, you can then click on one of the following three Radio Buttons to display more graphs."),
         
         br(),
         
@@ -89,6 +89,8 @@ ui <- dashboardPage(
         
         actionButton("Go","Go"),
         
+        h5("NOTE: There is an issue somewhere in my code that I cannot find for the life of me. If decomposition is selected you need to scroll down a good bit to see it. If autocorrelation is selected, you need to scroll down some to see it."),
+        
         br(),
         
         br(),
@@ -113,8 +115,8 @@ ui <- dashboardPage(
         h3("The full graph visualizes the data collected from Google Trends and the seasonal graph shows a graph of each year overlayed on each other to better show if there is any seasonality."),
         br(),
         br(),
-        h3("The autocorrelation graph is where things start to get interesting. Look at the vertical bars on the autocorrelation graph. If any of them are above the dashed horizontal blue line, then that is a highly correlated lag."),
-        h3("A highly correlated lag, in simple terms, just means that, at whatever month the bar is located at, the value at this month is a good predictor of the value of the current month. If the high bar is at month 1, the previous month is a good predictor of this month. If the highest bar is at month 12, the value in this month last year is a good predictor for the value this month."),
+        h3("The autocorrelation graph is where things start to get interesting. Look at the vertical bars on the autocorrelation graph. If any of them are above the dashed horizontal blue line, that is a highly correlated lag."),
+        h3("A highly correlated lag, in simple terms, just means that, at whatever month the bar is located at, the value at this prior month is a good predictor of the value of the current month. If the high bar is at month 1, the previous month is a good predictor of this month. If the highest bar is at month 12, the value in this month last year is a good predictor for the value this month."),
         br(),
         br(),
         h3("The decomposition graph, while scary looking at first, really isn't that bad. The graph at the top is the initial full series. The next graph is a graph of the trend. The next is a graph of the seasonal component of the initial series. The last is a graph of the remainder (that is, the things that are just by random chance)."),
