@@ -117,10 +117,8 @@ ui <- dashboardPage(
         h3("A highly correlated lag, in simple terms, just means that, at whatever month the bar is located at, the value at this month is a good predictor of the value of the current month. If the high bar is at month 1, the previous month is a good predictor of this month. If the highest bar is at month 12, the value in this month last year is a good predictor for the value this month."),
         br(),
         br(),
-        h3("The full graph visualizes the data collected from Google Trends."),
-        h3("The full graph visualizes the data collected from Google Trends."),
-        h3("The full graph visualizes the data collected from Google Trends."),
-        h3("The full graph visualizes the data collected from Google Trends."),
+        h3("The decomposition graph, while scary looking at first, really isn't that bad. The graph at the top is the initial full series. The next graph is a graph of the trend. The next is a graph of the seasonal component of the initial series. The last is a graph of the remainder (that is, the things that are just by random chance)."),
+        h3("The way to tell which is the most impactful is to look at the scale of the y axis. The item with the largest scale is the most impactful. If two (or all three) have the same scale, you then need to look at the little rectangles. The rectangle that covers the largest amount is the most impactful.")
         
         
         
