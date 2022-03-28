@@ -67,7 +67,7 @@ ui <- dashboardPage(
         
         plotlyOutput("TutorialDecomp"),
         
-        h3("Once you have gotten to this point, you are done with using the app. You can now go over to the Interpretations tab to learn how to understand what you are seeing, OR, if you want to be adventurous, jump right into the Now You Try tab.")
+        h3("Once you have gotten to this point, you are done with learning the app. You can now go over to the Interpretations tab to learn how to understand what you are seeing, OR, if you want to be adventurous, jump right into the Now You Try tab.")
         
       ),
       
@@ -109,7 +109,18 @@ ui <- dashboardPage(
       tabItem(
         tabName = "Tab3",
         
-        
+        h3("The full series and seasonality graphs are both fairly self-explanatory..."),
+        h3("The full graph visualizes the data collected from Google Trends and the seasonal graph shows a graph of each year overlayed on each other to better show if there is any seasonality."),
+        br(),
+        br(),
+        h3("The autocorrelation graph is where things start to get interesting. Look at the vertical bars on the autocorrelation graph. If any of them are above the dashed horizontal blue line, then that is a highly correlated lag."),
+        h3("A highly correlated lag, in simple terms, just means that, at whatever month the bar is located at, the value at this month is a good predictor of the value of the current month. If the high bar is at month 1, the previous month is a good predictor of this month. If the highest bar is at month 12, the value in this month last year is a good predictor for the value this month."),
+        br(),
+        br(),
+        h3("The full graph visualizes the data collected from Google Trends."),
+        h3("The full graph visualizes the data collected from Google Trends."),
+        h3("The full graph visualizes the data collected from Google Trends."),
+        h3("The full graph visualizes the data collected from Google Trends."),
         
         
         
