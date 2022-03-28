@@ -18,13 +18,13 @@ ui <- dashboardPage(
         
         br(),
         
-        textInput("SearchKeyword","What do you want to search for?"),
+        textInput("EXAMPLE1","What do you want to search for?",placeholder = "Lindsey Stirling"),
       
         h5("NOTE: The timeframe of the search will be for all data that Google Trends has."),
         
         br(),
         
-        actionButton("Go","Go"),
+        actionButton("EXAMPLE2","Go"),
         
         br(),
         
@@ -41,8 +41,8 @@ ui <- dashboardPage(
         br(),
         
         prettyRadioButtons(
-          inputId = "GraphToDisplay",
-          label = "What graph do you want to see now?", 
+          inputId = "EXAMPLE3",
+          label = "What graph do you want to see in addition to the full series graph?", 
           choices = c("Seasonality", "Autocorrelation", "Decomposition"),
           icon = icon("check"), 
           bigger = TRUE,
@@ -59,27 +59,26 @@ ui <- dashboardPage(
         
         h3("This is the output for when Autocorrelation is clicked."),
         
-        plotOutput("TutorialAuto")
+        plotOutput("TutorialAuto"),
         
+        br(),
         
+        h3("This is the output for when Decomposition is clicked."),
         
+        plotOutput("TutorialDecomp"),
         
-        
-        
-        
-        
-        
+        h3("Once you have gotten to this point, you are done with using the app. You can now go over to the Interpretations tab to learn how to understand what you are seeing, OR, if you want to be adventurous, jump right into the Now You Try tab.")
         
       ),
       
       tabItem(
         tabName = "Tab2",
         
-        textInput("SearchKeyword","What do you want to search for?"),
+        textInput("SearchKeyword","What do you want to search for?",placeholder = ""),
         
         prettyRadioButtons(
           inputId = "GraphToDisplay",
-          label = "What graph do you want to see?", 
+          label = "What graph do you want to see in addition to the full series graph?", 
           choices = c("Seasonality", "Autocorrelation", "Decomposition"),
           icon = icon("check"), 
           bigger = TRUE,
@@ -90,7 +89,17 @@ ui <- dashboardPage(
         
         actionButton("Go","Go"),
         
+        br(),
         
+        br(),
+        
+        plotlyOutput("UserMade"),
+        
+        br(),
+        
+        plotlyOutput("UserSeason"),
+        plotOutput("UserAuto"),
+        plotlyOutput("UserDecomp")
         
         
         

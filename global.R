@@ -23,4 +23,3 @@ g_trends <- tsibble(g_trends)
 g_trends$Interest <- as.numeric(
   ifelse(g_trends$Interest == "<1", 0, g_trends$Interest)
 )
-
