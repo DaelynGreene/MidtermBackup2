@@ -23,7 +23,7 @@ server <- function(input, output, session) {
       } else {
         showModal(modalDialog(
           title = "Important Message",
-          "Would you kindly input a Graph."
+          "Would you kindly input a Graph Type."
         ))
       }
     } else {
