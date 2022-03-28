@@ -65,7 +65,7 @@ ui <- dashboardPage(
         
         h3("This is the output for when Decomposition is clicked."),
         
-        plotOutput("TutorialDecomp"),
+        plotlyOutput("TutorialDecomp"),
         
         h3("Once you have gotten to this point, you are done with using the app. You can now go over to the Interpretations tab to learn how to understand what you are seeing, OR, if you want to be adventurous, jump right into the Now You Try tab.")
         
